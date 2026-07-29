@@ -65,7 +65,7 @@ function App() {
             <Route element={<ProtectedRoute><UserLayout /></ProtectedRoute>}>
               <Route path="/dashboard" element={<ProtectedRoute requiredRole={["user", "vendor"]}><UserDashboard /></ProtectedRoute>} />
               <Route path="/vendor/dashboard" element={<ProtectedRoute requiredRole={["vendor"]}><VendorDashboard /></ProtectedRoute>} />
-              <Route path="/vendor/register" element={<ProtectedRoute requiredRole={["vendor"]}><VendorRegister /></ProtectedRoute>} />
+              <Route path="/vendor/register" element={<ProtectedRoute requiredRole={["user", "vendor"]}><VendorRegister /></ProtectedRoute>} />
               <Route path="/vendor/availability" element={<ProtectedRoute requiredRole={["vendor"]}><VendorAvailability /></ProtectedRoute>} />
               <Route path="/vendor/bookings" element={<ProtectedRoute requiredRole={["vendor"]}><VendorBookings /></ProtectedRoute>} />
               <Route path="/vendor/bookings/:bookingId" element={<ProtectedRoute requiredRole={["vendor"]}><VendorBookings /></ProtectedRoute>} />
